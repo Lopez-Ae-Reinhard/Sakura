@@ -1,0 +1,7 @@
+create database dictionary_system charset=utf8
+
+create table userinfo (id int primary key auto_increment,user_name varchar(32) not null,password varchar(128) not null,email varchar(64) not null);
+
+create table dictionary (id int primary key auto_increment,word varchar(32),explanation text);
+
+create table history (id int primary key auto_increment, user_name varchar(32) not null, information varchar(32) not null, time datetime default now());
